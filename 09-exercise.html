@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Exercise 8 -->
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Count and display items of a dropdown list - w3resource</title>
+    </head>
+    <body>
+        <form>
+            Select your favorite Color :
+            <select id="mySelect">
+                <option>Red</option>
+                <option>Green</option>
+                <option>Blue</option>
+                <option>White</option>
+            </select>
+            <input type="button" onclick="getOptions()" value="Count and Output all items">
+        </form>
+
+        <script>
+            function getOptions(){
+                var selected = document.getElementById("mySelect");
+                var length = selected.length;
+                var colorList = "";
+
+                for (var i = 0; i < length; i++){
+                    colorList += selected[i].value + "\n";
+                }
+                var text = "There are "+length+" items in the dropdown list. \nThe list consists of: \n" +colorList;
+                alert(text);
+            }
+        
+        
+        </script>
+    </body>
+</html>
