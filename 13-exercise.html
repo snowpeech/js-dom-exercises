@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Exercise 13 -->
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Window size</title>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Quicksand', sans-serif;
+                padding: 20px;
+            }
+        
+        </style>
+    </head>
+    <body onresize="resized()">
+        <div>
+            Resize the window to see what its dimensions are. 
+            <p id = "dimensions"> </p>
+        </div>
+
+        <script>
+            //Write a JavaScript program to get the width and height of the window (any time the window is resized)
+            document.getElementById("dimensions").innerHTML = "The window has not been resized yet."
+
+            function resized(){
+                var width = window.innerWidth;
+                var height = window.innerHeight;
+                var para = document.getElementById("dimensions");
+
+                para.innerHTML = "The window is "+width+ "px wide and " +height+ "px tall."
+            }
+            
+        </script>
+
+    </body>
+</html>
