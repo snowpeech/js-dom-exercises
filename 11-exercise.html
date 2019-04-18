@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Exercise 11 -->
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Random picture</title>
+    </head>
+    <body>
+        <p>Click for a random picture</p>
+
+        <input type="button" onClick="randPic()" value="Picture please">
+
+        <div id = "picture"></div>
+
+        
+
+        <script>
+            var num = Math.floor(Math.random() * 3);
+            var arrPics = [];
+            arrPics[0]=new Image;
+            arrPics[0].src= "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg";
+            arrPics[0].width = "240px";
+            arrPics[0].height = "160px";
+
+            arrPics[1]=new Image;
+            arrPics[1].src="http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg";
+            arrPics[1].width = "320px";
+            arrPics[1].height = "195px";
+
+            arrPics[2]=new Image;
+            arrPics[2].src= "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg";
+            arrPics[2].width = "500px";
+            arrPics[2].height = "343px";
+
+            function randPic(){
+                var num = Math.floor(Math.random() * 3);                
+                document.getElementById("picture").innerHTML = '<img src=' + arrPics[num].src + 'style="width:' + arrPics[num].width + ';height:' + arrPics[num].height +';">';
+            }
+        </script>
+
+    </body>
+</html>

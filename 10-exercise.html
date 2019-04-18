@@ -3,14 +3,33 @@
 <html>
     <head>
         <meta charset=utf-8 />
-        <title>Count and display items of a dropdown list - w3resource</title>
+        <title>Volume of a Sphere</title>
     </head>
     <body>
-        <p>Input radius value and get the volume of a sphere.</p>
-        <form action="" method="post" id="MyForm">
-            <label for="radius">Radius</label><input type="text" name="radius" id="radius" required>
-            <label for="volume">Volume</label><input type="text" name="volume" id="volume">
+        <p>Input radius value to get the volume of a sphere.</p>
+        <form action="" method="post" id="myForm">
+            <label for="radius">Radius</label>
+            <input type="text" name="radius" id="radius" required>
+            
+            <label for="volume">Volume: </label>
+            <input type="text" name="volume" id="volume"></input>
             <input type="submit" value="Calculate" id="submit">    
         </form>
+
+        <script>
+            //volume = 4/3 * pi * r^3
+            document.getElementById("myForm").addEventListener("submit", calcVol);
+            var rad;
+            
+            function calcVol(){
+                var rad = document.getElementById("radius").value; 
+                rad = parseInt(rad);
+                var vol = (4/3)*Math.PI * (rad**3);
+                document.getElementById("volume").value =vol;
+            }
+
+            
+        </script>
+
     </body>
 </html>
