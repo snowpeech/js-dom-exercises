@@ -8,13 +8,19 @@
         <style>
             body {
                 font-family: 'Quicksand', sans-serif;
+                padding: 20px;
+            }
+
+            span span {
+                color: cornflowerblue;
+                font-weight: bold;
             }
             
         
         </style>
     </head>
     <body>
-        <div onmouseover="mouseOn()" onmouseout = "mouseOff()">Mouse over here to show bold words below</div>
+        <span onmouseover="mouseOn()" onmouseout = "mouseOff()">[<span>Mouse over here to show bold words below</span>]</span>
         
         <p id = "replace">We have just started this section for the users (beginner 
             to intermediate) who want to work with various JavaScript 
